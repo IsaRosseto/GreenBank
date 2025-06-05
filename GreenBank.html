@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenBank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg-gradient {
+            background: linear-gradient(135deg, #F0FDF4 0%, #E0F2FE 100%); /* Light Green to Light Blue */
+        }
+        .ws-green {
+            color: #00C881; /* Wealthsimple-like green */
+        }
+        .btn-green {
+            background-color: #00C881;
+            transition: background-color 0.3s ease;
+        }
+        .btn-green:hover {
+            background-color: #00A36A;
+        }
+        .btn-outline-dark {
+            border: 1px solid #374151; /* gray-700 */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .btn-outline-dark:hover {
+            background-color: #374151;
+            color: white;
+        }
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold ws-green">GreenBank</a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-6 items-center">
+                    <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Produtos</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Aprenda</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Revista</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Sobre Nós</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Suporte</a>
+                </nav>
+
+                <!-- Action Buttons -->
+                <div class="hidden md:flex items-center space-x-3">
+                    <a href="#" class="text-gray-600 hover:text-gray-900 font-medium px-4 py-2 rounded-lg">Entrar</a>
+                    <a href="#" class="btn-green text-white font-medium px-4 py-2 rounded-lg">Abrir conta</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <a href="#" class="block px-4 py-3 text-gray-600 hover:bg-gray-100 font-medium">Produtos</a>
+            <a href="#" class="block px-4 py-3 text-gray-600 hover:bg-gray-100 font-medium">Aprenda</a>
+            <a href="#" class="block px-4 py-3 text-gray-600 hover:bg-gray-100 font-medium">Revista</a>
+            <a href="#" class="block px-4 py-3 text-gray-600 hover:bg-gray-100 font-medium">Sobre Nós</a>
+            <a href="#" class="block px-4 py-3 text-gray-600 hover:bg-gray-100 font-medium">Suporte</a>
+            <div class="px-4 py-3 border-t border-gray-200">
+                <a href="#" class="block text-center w-full mb-2 btn-outline-dark text-gray-700 font-medium px-4 py-2 rounded-lg">Entrar</a>
+                <a href="#" class="block text-center w-full btn-green text-white font-medium px-4 py-2 rounded-lg">Abrir conta</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg-gradient py-20 md:py-32">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                Invista seu dinheiro de <span class="ws-green">forma mais inteligente</span>.
+            </h1>
+            <p class="text-lg md:text-xl text-gray-700 mb-10 max-w-2xl mx-auto">
+                Ferramentas poderosas e fáceis de usar para ajudar você a construir riqueza, não importa como você invista.
+            </p>
+            <div class="max-w-md mx-auto sm:flex sm:justify-center">
+                <input type="email" placeholder="Seu endereço de e-mail" class="w-full sm:w-auto px-6 py-3 mb-3 sm:mb-0 sm:mr-3 text-gray-900 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-400 focus:border-transparent" />
+                <button class="w-full sm:w-auto btn-green text-white font-semibold px-8 py-3 rounded-lg">
+                    Comece agora
+                </button>
+            </div>
+            <p class="text-xs text-gray-600 mt-4">Junte-se a milhões de pessoas.</p>
+        </div>
+    </section>
+
+    <!-- "Ways to Invest" or Products Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 text-center mb-4">Maneiras de investir com a gente</h2>
+            <p class="text-lg text-gray-700 text-center mb-12 max-w-xl mx-auto">Tudo que você precisa para assumir o controle do seu futuro financeiro.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature Card 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg feature-card">
+                    <img src="https://placehold.co/64x64/00C881/FFFFFF?text=📈" alt="Ícone de Ações" class="h-16 w-16 mb-6 rounded-md">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Negociação de Ações</h3>
+                    <p class="text-gray-700 leading-relaxed">Compre e venda milhares de ações e ETFs dos EUA e Canadá, sem comissão.</p>
+                </div>
+                <!-- Feature Card 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg feature-card">
+                    <img src="https://placehold.co/64x64/00C881/FFFFFF?text=₿" alt="Ícone de Cripto" class="h-16 w-16 mb-6 rounded-md">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Criptomoedas</h3>
+                    <p class="text-gray-700 leading-relaxed">Invista em Bitcoin, Ethereum e dezenas de outras moedas digitais de forma segura.</p>
+                </div>
+                <!-- Feature Card 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg feature-card">
+                     <img src="https://placehold.co/64x64/00C881/FFFFFF?text=🏦" alt="Ícone de Investimento Gerenciado" class="h-16 w-16 mb-6 rounded-md">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Investimento Gerenciado</h3>
+                    <p class="text-gray-700 leading-relaxed">Nós construímos e gerenciamos um portfólio diversificado para você, com taxas baixas.</p>
+                </div>
+                 <!-- Feature Card 4 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg feature-card">
+                     <img src="https://placehold.co/64x64/00C881/FFFFFF?text=💰" alt="Ícone de Conta de Alto Rendimento" class="h-16 w-16 mb-6 rounded-md">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Conta de Alto Rendimento</h3>
+                    <p class="text-gray-700 leading-relaxed">Ganhe juros competitivos sobre seu dinheiro com nossa conta de poupança flexível.</p>
+                </div>
+                 <!-- Feature Card 5 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg feature-card">
+                     <img src="https://placehold.co/64x64/00C881/FFFFFF?text=🧾" alt="Ícone de Impostos" class="h-16 w-16 mb-6 rounded-md">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Impostos Simplificados</h3>
+                    <p class="text-gray-700 leading-relaxed">Declare seus impostos de forma fácil e obtenha o máximo de reembolso, garantido.</p>
+                </div>
+                 <!-- Feature Card 6 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg feature-card">
+                     <img src="https://placehold.co/64x64/00C881/FFFFFF?text=🏡" alt="Ícone de Hipoteca" class="h-16 w-16 mb-6 rounded-md">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Hipotecas Inteligentes</h3>
+                    <p class="text-gray-700 leading-relaxed">Obtenha uma ótima taxa de hipoteca online, com aconselhamento especializado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- "Trusted By" Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Confiado por milhões de pessoas.</h2>
+            <p class="text-lg text-gray-700 mb-8 max-w-lg mx-auto">Estamos ajudando pessoas como você a alcançar seus objetivos financeiros.</p>
+            <!-- Could add logos or testimonials here -->
+            <div class="flex justify-center space-x-8">
+                 <img src="https://placehold.co/120x60/CCCCCC/969696?text=Cliente+A" alt="Logo Cliente A" class="h-12 rounded-md">
+                 <img src="https://placehold.co/120x60/CCCCCC/969696?text=Cliente+B" alt="Logo Cliente B" class="h-12 rounded-md">
+                 <img src="https://placehold.co/120x60/CCCCCC/969696?text=Cliente+C" alt="Logo Cliente C" class="h-12 rounded-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- "Safe and Secure" Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                     <img src="https://placehold.co/500x350/E0F2FE/3B82F6?text=Segurança+Digital" alt="Ilustração de Segurança" class="rounded-lg shadow-xl mx-auto">
+                </div>
+                <div>
+                    <span class="text-sm font-semibold ws-green uppercase tracking-wider">Segurança Primeiro</span>
+                    <h2 class="text-3xl font-bold text-gray-900 mt-2 mb-5">Seu dinheiro está seguro e protegido.</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Usamos criptografia de ponta e protocolos de segurança robustos para proteger suas informações e seus ativos.
+                    </p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 ws-green mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span>Proteção CIPF para suas contas de investimento.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 ws-green mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span>Autenticação de dois fatores (2FA) para segurança extra.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 ws-green mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                            <span>Seus dados são criptografados em trânsito e em repouso.</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="inline-block mt-6 text-green-600 font-semibold hover:text-green-700">
+                        Saiba mais sobre nossa segurança &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-16 md:py-24 hero-bg-gradient">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Pronto para começar a investir?</h2>
+            <p class="text-lg text-gray-700 mb-10 max-w-xl mx-auto">
+                Abra uma conta em minutos e dê o primeiro passo para um futuro financeiro mais inteligente.
+            </p>
+            <a href="#" class="btn-green text-white font-semibold px-10 py-4 rounded-lg text-lg">
+                Abrir minha conta
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+                <div>
+                    <h5 class="text-white font-semibold mb-4">Wealthsimple</h5>
+                    <a href="#" class="block hover:text-white mb-2">Quem somos</a>
+                    <a href="#" class="block hover:text-white mb-2">Carreiras</a>
+                    <a href="#" class="block hover:text-white mb-2">Imprensa</a>
+                    <a href="#" class="block hover:text-white mb-2">Legal</a>
+                </div>
+                <div>
+                    <h5 class="text-white font-semibold mb-4">Produtos</h5>
+                    <a href="#" class="block hover:text-white mb-2">Investir</a>
+                    <a href="#" class="block hover:text-white mb-2">Negociar</a>
+                    <a href="#" class="block hover:text-white mb-2">Cripto</a>
+                    <a href="#" class="block hover:text-white mb-2">Poupar</a>
+                    <a href="#" class="block hover:text-white mb-2">Impostos</a>
+                </div>
+                <div>
+                    <h5 class="text-white font-semibold mb-4">Aprenda</h5>
+                    <a href="#" class="block hover:text-white mb-2">Revista Pessoal</a>
+                    <a href="#" class="block hover:text-white mb-2">Central de Ajuda</a>
+                    <a href="#" class="block hover:text-white mb-2">Glossário Financeiro</a>
+                </div>
+                <div>
+                    <h5 class="text-white font-semibold mb-4">Social</h5>
+                    <a href="#" class="block hover:text-white mb-2">Instagram</a>
+                    <a href="#" class="block hover:text-white mb-2">Facebook</a>
+                    <a href="#" class="block hover:text-white mb-2">Twitter / X</a>
+                    <a href="#" class="block hover:text-white mb-2">LinkedIn</a>
+                </div>
+                <div class="col-span-2 md:col-span-4 lg:col-span-1">
+                    <h5 class="text-white font-semibold mb-4">Inscreva-se na nossa newsletter</h5>
+                    <p class="mb-3 text-sm">Receba dicas financeiras e novidades sobre produtos diretamente no seu e-mail.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="seu@email.com" class="bg-gray-800 text-white px-3 py-2 rounded-l-md focus:outline-none focus:ring-1 focus:ring-green-500 w-full">
+                        <button class="btn-green text-white px-4 py-2 rounded-r-md text-sm">Inscrever</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-sm text-center md:text-left">
+                <p class="mb-2">&copy; GreenBank. Todos os direitos reservados. Este é um clone educacional.</p>
+                <p>GreenBank™ é uma marca registrada da Wealthsimple Technologies Inc.</p>
+                <p class="mt-4">
+                    <a href="#" class="hover:text-white underline mr-4">Termos de Serviço</a>
+                    <a href="#" class="hover:text-white underline">Política de Privacidade</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+
+</body>
+</html>
